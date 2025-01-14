@@ -25,10 +25,9 @@ int main()
     char password[24]; // ebp - 0x35
     char buffer2[4];
 
+    printf("Please enter key: ");
     if (scanf("%23s", &password) != 1)
         no();
-
-    char idk;
 
     // password need to start with '00'
     if(password[1] != '0') // ebp - 0x34
@@ -52,7 +51,7 @@ int main()
         if(strlen(&buffer1) < 8)
             cmp = a < strlen(&password);
 
-        if (cmp == true)
+        if (!cmp)
             break;
 
         // password is ascii of delabere by pack of 3
@@ -62,7 +61,7 @@ int main()
         buffer2[2] = password[2 + a];
         buffer1[b] = atoi(&buffer2);
         a += 3;
-        b += 1;
+        b++;
     }
     buffer1[b] = 0;
 

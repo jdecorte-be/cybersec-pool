@@ -26,6 +26,7 @@ int main()
     char password[31];
     char buffer2[4];
 
+    printf("Please enter key: ");
     if (scanf("%23s", &password) != 1)
         ___syscall_malloc();
 

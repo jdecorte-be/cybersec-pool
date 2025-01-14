@@ -5,12 +5,11 @@
 
 int main()
 {
-    int32_t password;
-    strcpy(password, "__stack_check");
+    char password[] = "__stack_check";
     printf("Please enter key: ");
     
-    void tocmp;
-    scanf("%s", tocmp, &_GLOBAL_OFFSET_TABLE_);
+    char tocmp[100];
+    scanf("%s", &tocmp);
 
     if(strcmp(&tocmp, &password) != 0)
         printf("Nope.\n");
