@@ -4,7 +4,8 @@ import PIL.Image
 def readExif(filename):
     with PIL.Image.open(filename) as img:
         exif_data = img.getexif()
-        print(exif_data)
+        metadata = {}
+        for tag, value in exif_data.items():
 
 
 
