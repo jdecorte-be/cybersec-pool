@@ -4,7 +4,7 @@ from PIL.ExifTags import TAGS
 import time
 import os
 
-def readExif(filename):
+def readExif(filename: str) -> None:
     try:
         with Image.open(filename) as img:
             exif_data = img.getexif()
@@ -17,7 +17,7 @@ def readExif(filename):
         print("Error reading exif data: ", filename, e)
 
 
-def scorpion():
+def scorpion() -> None:
     args = sys.argv
     if(len(args) <= 1):
         return print("Error: scorpion need at least 1 file")
