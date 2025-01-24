@@ -1,11 +1,11 @@
 
-
 services:
-  nginx:
-    image: nginx:latest
+  ft_onion:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - 9999:80
-    volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./index.html:/var/www/html/index.html
+      - "7878:80"
+      - "3142:4242"
+    
     
