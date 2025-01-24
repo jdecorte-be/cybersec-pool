@@ -1,11 +1,6 @@
 
 services:
-  ft_onion:
+  tor:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "7878:80"
-      - "3142:4242"
-    
-    

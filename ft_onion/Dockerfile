@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM nginx:latest
 EXPOSE 80
 EXPOSE 4242
 
@@ -14,12 +14,10 @@ COPY "./nginx.conf" "/etc/nginx/nginx.conf"
 COPY "./index.html" "/var/www/html/index.html"
 
 # Setup SSH Service
-COPY "./sshd_config" "/etc/ssh"
+RUN echo "root:root" | chpasswd
+COPY "./sshd_config" "/etc/ssh/sshd_config"
 
 # Setup Tor Service
 COPY "./torrc" "/etc/tor/torrc"
-# RUN chmod o+rwx /etc/torq
-
 
 CMD service ssh start && service tor start && nginx -g "daemon off;"
-
