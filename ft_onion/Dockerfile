@@ -10,7 +10,7 @@ RUN apt-get update && \
 HEALTHCHECK CMD ["/usr/bin/curl", "--socks5", "localhost:9050", "--socks5-hostname", "localhost:9050", "https://check.torproject.org/api/ip"]
 
 # Setup Nginx Service
-COPY "./nginx.conf" "/etc/nginx/nginx.conf"
+COPY "./nginx.conf" "/etc/nginx/conf.d/default.conf"
 COPY "./index.html" "/var/www/html/index.html"
 
 # Setup SSH Service
@@ -21,3 +21,5 @@ COPY "./sshd_config" "/etc/ssh/sshd_config"
 COPY "./torrc" "/etc/tor/torrc"
 
 CMD service ssh start && service tor start && nginx -g "daemon off;"
+
+# /var/lib/tor/my_website/hostname
