@@ -1,7 +1,5 @@
 # Cybersec-Pool
 
-## Overview
-
 This repository contains a collection of projects and assignments from the Cybersecurity Pool, focusing on various aspects of cybersecurity, including web data manipulation, metadata analysis, and the implementation of security protocols.
 
 1. **Arachnida**:
