@@ -4,13 +4,13 @@
 
 This repository contains a collection of projects and assignments from the Cybersecurity Pool, focusing on various aspects of cybersecurity, including web data manipulation, metadata analysis, and the implementation of security protocols.
 
-1. **01Arachnida**:
+1. **Arachnida**:
    - **Description**: This project involves developing a tiny web crawler designed to navigate and extract data from websites. The focus is on understanding web data manipulation and analyzing metadata, which are crucial skills in cybersecurity for tasks such as vulnerability assessment and information gathering.
 
-2. **02ft_otp**:
+2. **ft_otp**:
    - **Description**: In this project, the goal is to implement a Time-based One-Time Password (TOTP) system, adhering to RFC 6238. TOTP is an extension of the HMAC-based One-Time Password (HOTP) algorithm (RFC 4226) and is widely used for two-factor authentication. This project enhances understanding of authentication mechanisms and the implementation of security protocols.
 
-3. **03ft_onion**:
+3. **ft_onion**:
    - **Description**: This project focuses on creating tiny Tor web services using Docker. Tor (The Onion Router) is a network that enables anonymous communication, and this project aims to provide hands-on experience in setting up and understanding the workings of anonymous web services, which is essential for privacy and security in cyberspace.
 
 4. **reverse_me**:
